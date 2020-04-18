@@ -5,12 +5,9 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('resources').insert([
-        {resource_name: 'laptop-design', resource_description: 'mobile computer with graphic software'},
-        {resource_name: 'laptop-program', resource_description: 'mobile computer with code writing software'},
-        {resource_name: 'paint supplies', resource_description: 'paint, brushes, rollers, tape, drop cloths, 6ft ladder'},
-        {resource_name: 'John Doe', resource_description: 'full stack - front end focus'},
-        {resource_name: 'Jane Doe', resource_description: 'full stack - back end focus'},
-        {resource_name: 'Pat Doe', resource_description: 'full stack'}
+        {id: 1, r_name: 'box', r_description: 'big one' },
+        {id: 2, r_name: 'cube', r_description: 'small one' },
+        {id: 3, r_name: 'rubix', r_description: 'great game' }
       ]);
     });
 };
