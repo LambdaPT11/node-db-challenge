@@ -23,24 +23,21 @@ exports.up = function(knex) {
          .defaultTo(0);
       tbl.integer('project_id')
          .unsigned()
-         .unique()
          .references('projects_id')
          .inTable('projects');
     })
     .createTable('project', tbl => {
+      tbl.increments('project_id')
       tbl.integer('projects_id')
          .unsigned()
-         .unique()
          .references('projects_id')
          .inTable('projects');
       tbl.integer('task_id')
          .unsigned()
-         .unique()
          .references('task_id')
          .inTable('tasks');
-         tbl.integer('resource_id')
+      tbl.integer('resource_id')
          .unsigned()
-         .unique()
          .references('resource_id')
          .inTable('resources');
     })
